@@ -58,5 +58,9 @@ module Simpler
       @response['Content-Type'] = 'text/plain'
       @request.env['simpler.plain_text'] = text
     end
+
+    def status(code)
+      @response.status = code
+    end
   end
 end
